@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Phiên bản cũ -->
+    <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 
+        JSX là cách viết giao diện React giống HTML, nhưng nằm trong JavaScript
+        Dễ đọc, dễ học
+        Viết ngắn hơn rất nhiều
+        Là tiêu chuẩn trong lập trình React hiện đại
+    -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+// Bài 2:
+    // <ul>
+    //     <li>Javascript</li>
+    //     <li>ReactJs</li>
+    // </ul>
+
+        // // React
+        // const reactCourse = "ReactJS F8"
+
+        // const ul = <ul>
+        //                  <li>Javascript</li>
+        //                  <li>ReactJs</li>
+        //             </ul>
+
+        // // React@17
+        // ReactDOM.render(ul, document.getElementById('root'))
+
+
+
+// // Bài thêm 1:
+        
+//         // React
+//         const courses = [
+//             { name: 'HTML, CSS'},
+//             { name: 'Responsive web design'},
+//             { name: 'ReactJS'}
+//         ];
+
+//         const ul = (
+//             <ul>
+//                 {courses.map(course =>
+//                     <li>{course.name}</li>
+//                 )}
+//             </ul>
+//         );
+        
+//         // React@18
+//         const root = ReactDOM.createRoot(document.getElementById('root'))
+//         root.render(ul)
+
+
+
+// // Bài thêm 2 từ chat GPT:
+//         const products = [
+//             {
+//                 name: 'MacBook Air M2',
+//                 price: 999,
+//                 brand: 'Apple'
+//             },
+//             {
+//                 name: 'ThinkPad X1 Carbon',
+//                 price: 1200,
+//                 brand: 'Lenovo'
+//             },
+//             {
+//                 name: 'Aspire 5',
+//                 price: 550,
+//                 brand: 'Acer'
+//             }
+//             ];
+
+//         const ul2 = (
+//             <ul>
+//                 {products.map((product, index) => (
+//                     <li key = {index}>
+//                     <strong>{product.name}</strong> ({product.brand}): <em>{product.price}</em>
+//                     </li>
+//             ))}
+//             </ul>
+//         )
+
+//         // React@18
+//         const root = ReactDOM.createRoot(document.getElementById('root'))
+//         root.render(ul2)
+
+
+// Render 2 elements cùng lúc: <React.Fragment> có thể viết gọn là <>
+        // <React.Fragment> 
+                // Nội dung
+        // </React.Fragment> viết đủ
+
+        const jsx = (
+            <>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+            </>
+        )
+
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(jsx)
+    </script>
+
+</body>
+</html>
