@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Phiên bản cũ -->
+    <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 
+        Props:
+            - React element
+                + Sử dụng props giống như với attribute của HTML
+                + 2 props class, for => className, htmlFor
+                + Phải tuân thủ quy ước có sẵn
+
+            - React components
+                + Sử dụng props giống như đối số cho Function
+                + Tự do đặt tên theo kiểu camelCase
+            
+            - Chú ý:
+                + Props cơ bản là đối số của Component
+                => Props có thể là bất kì kiểu dữ liệu gì
+                - Sử dung destructuring
+    -->
+    <div id="app"></div>
+
+    <script type="text/babel">
+
+        function PostItem({
+            title,
+            description,
+            published
+        }) {
+            return (
+                <div className="post-item">
+                    <img/>
+                    <h2 className="post-title">{title}</h2>
+                    <p className="post-desc">{description}</p>
+                    <p className="post-published">{published}</p>
+                </div>
+            )
+        }
+
+        const app = (
+            <div className="wrapper">
+                <PostItem 
+                    title="C#(.NET) - Tương tác với ..."
+                    description="Bạn có kiến thức ngôn ngữ C#"
+                    published="Một ngày trước 5 phút sau"
+                />
+
+                <PostItem 
+                    title="Mục 2 C#(.NET) - Tương tác với ..."
+                    description="Mục 2 Bạn có kiến thức ngôn ngữ C#"
+                    published="Mục 2 Một ngày trước 5 phút sau"
+                />
+
+                <PostItem 
+                    title="Mục 3 C#(.NET) - Tương tác với ..."
+                    description="Mục 3 Bạn có kiến thức ngôn ngữ C#"
+                    published="Mục 3 Một ngày trước 5 phút sau"
+                />
+            </div>
+        )
+
+        const root = ReactDOM.createRoot(document.getElementById('app'))
+        root.render(app)
+
+    </script>
+
+</body>
+</html>
