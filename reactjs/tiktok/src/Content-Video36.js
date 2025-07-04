@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 
 
-// ***** Video 35 *****
+// ***** Video 36 *****
 
 // Events: Add / Remove event listener
 // Observer pattern: Subscribe / Unsubscribe
